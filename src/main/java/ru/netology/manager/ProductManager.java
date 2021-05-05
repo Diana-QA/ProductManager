@@ -15,6 +15,10 @@ public class ProductManager {
         this.repository = repository;
     }
 
+    public void add(Product product){
+        repository.save(product);
+    }
+
     public Product[] searchyBy(String text) {
         Product[] result = new Product[0];
         for (Product product: repository.findAll()) {
